@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS Intelligence Platform</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            /* Premium Light Theme */
+            --bg: #FAFAFA;
+            --surface: #FFFFFF;
+            --surface-hover: #F3F4F6;
+            --border: #E5E7EB;
+            --border-light: #F3F4F6;
+            
+            --text-main: #111827;
+            --text-muted: #6B7280;
+            --text-faint: #9CA3AF;
+            
+            --primary: #000000;
+            --primary-hover: #374151;
+            
+            --success: #10B981;
+            --success-bg: #D1FAE5;
+            --success-text: #065F46;
+            
+            --danger: #EF4444;
+            --danger-bg: #FEE2E2;
+            --danger-text: #991B1B;
+            
+            --warning: #F59E0B;
+
+            --radius-lg: 20px;
+            --radius-md: 16px;
+            --radius-sm: 8px;
+            
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow: hidden; /* Prevent body scroll for app-like feel */
+        }
+
+        h1, h2, h3, h4, p { margin: 0; }
+        
+        button {
+            background: var(--primary);
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 9999px;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: var(--shadow-sm);
+        }
+        button:hover { background: var(--primary-hover); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+        button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+        
+        .btn-outline { background: var(--surface); color: var(--text-main); border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+        .btn-outline:hover { background: var(--surface-hover); }
+
+        /* Navigation Header */
+        .header-wrapper {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            padding: 16px 32px;
+            height: 70px;
+        }
+
+        .header { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 18px; font-weight: 700; letter-spacing: -0.5px; display: flex; align-items: center; gap: 12px; }
+        .logo span { color: var(--text-muted); font-weight: 400; font-size: 14px; }
+
+        /* Layout Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px 32px;
+            display: grid;
+            grid-template-columns: 320px 1fr 320px;
+            gap: 40px;
+            height: calc(100vh - 70px);
+        }
+
+        /* Scrolling columns */
+        .col-left, .col-right {
+            display: flex; flex-direction: column; gap: 32px;
+            overflow-y: auto; padding-bottom: 40px;
+        }
+
+        .col-center {
+            display: flex; flex-direction: column;
+            height: 100%; overflow: hidden; /* Child will scroll */
+        }
+
+        /* Minimal Cards */
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .card-header { display: flex; justify-content: space-between; align-items: center; }
+        .section-title { font-size: 15px; font-weight: 600; color: var(--text-main); margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; width: 100%; }
+        .section-subtitle { font-size: 13px; font-weight: 400; color: var(--text-muted); }
+
+        /* Status Indicator */
+        .status-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-size: 12px; font-weight: 500;
+            padding: 4px 10px; border-radius: 9999px;
+            background: var(--surface-hover);
+        }
+        .status-dot { height: 8px; width: 8px; border-radius: 50%; display: inline-block; }
+        .status-dot.active { background: var(--success); }
+        .status-dot.idle { background: var(--text-faint); }
+        .status-dot.error { background: var(--danger); }
+        
+        /* Pills */
+        .pill { font-size: 11px; padding: 4px 10px; border-radius: 9999px; font-weight: 600; }
+        .pill.selected { background: var(--success-bg); color: var(--success-text); }
+        .pill.rejected { background: var(--danger-bg); color: var(--danger-text); }
+        
+        /* Progress Steps */
+        .step-list { display: flex; flex-direction: column; gap: 16px; margin-top: 8px; }
+        .step { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-muted); }
+        .step.active { color: var(--text-main); font-weight: 500; }
+        .step.done { color: var(--text-faint); }
+        .spinner { width: 14px; height: 14px; border: 2px solid var(--border); border-top-color: var(--primary); border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* Feed container scrolling */
+        .feed-container {
+            display: flex; flex-direction: column; gap: 24px;
+            overflow-y: auto; padding-right: 12px; padding-bottom: 40px;
+        }
+
+        .social-post {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+            position: relative;
+        }
+        .social-post:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+        
+        .new-indicator {
+            position: absolute; top: -10px; left: 24px;
+            background: var(--primary); color: white;
+            font-size: 10px; font-weight: 700; padding: 2px 8px;
+            border-radius: 12px; text-transform: uppercase;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .post-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+        .avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #000000, #374151); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 18px; }
+        .post-meta { display: flex; flex-direction: column; line-height: 1.3; }
+        .post-author { font-weight: 600; font-size: 15px; color: var(--text-main); }
+        .post-handle { font-size: 13px; color: var(--text-muted); }
+        
+        .post-actions { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+        .post-time { font-size: 13px; color: var(--text-faint); }
+        .btn-info {
+            background: var(--surface-hover); color: var(--text-muted);
+            border: none; width: 28px; height: 28px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; font-weight: 600; font-size: 14px;
+            font-family: serif; font-style: italic;
+        }
+        .btn-info:hover { background: var(--border); color: var(--text-main); }
+
+        .post-content { font-size: 16px; line-height: 1.7; white-space: pre-wrap; color: var(--text-main); }
+        
+        /* Discovered Topics */
+        .topics-list { display: flex; flex-direction: column; padding: 0 12px; gap: 8px; }
+        .topic-item { 
+            padding: 16px; border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s;
+            background: var(--bg); border: 1px solid transparent;
+            display: flex; flex-direction: column; gap: 8px;
+        }
+        .topic-item:hover { background: var(--surface); border-color: var(--border); box-shadow: var(--shadow-sm); }
+        .topic-item-title { font-size: 14px; font-weight: 500; color: var(--text-main); line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .topic-item-meta { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-muted); }
+
+        /* Stats Grid */
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .stat-item { background: var(--bg); padding: 20px; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid var(--border-light); }
+        .value-lg { font-size: 32px; font-weight: 700; color: var(--text-main); letter-spacing: -1px; line-height: 1; margin-bottom: 8px; }
+        .stat-title { font-size: 12px; font-weight: 500; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* Key-Value List */
+        .kv-list { display: flex; flex-direction: column; gap: 16px; }
+        .kv-item { display: flex; justify-content: space-between; align-items: center; font-size: 14px; }
+        .kv-key { color: var(--text-muted); font-weight: 500; }
+        .kv-val { color: var(--text-main); display: flex; align-items: center; gap: 8px; font-weight: 500; }
+        
+        /* Modal Overlay */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(17, 24, 39, 0.4); backdrop-filter: blur(4px);
+            display: none; align-items: center; justify-content: center; z-index: 100;
+            opacity: 0; transition: opacity 0.2s ease;
+        }
+        .modal-overlay.open { display: flex; opacity: 1; }
+        .modal-content {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius-lg); padding: 40px; width: 100%; max-width: 600px;
+            max-height: 90vh; overflow-y: auto; position: relative;
+            box-shadow: var(--shadow-lg); transform: translateY(20px); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .modal-overlay.open .modal-content { transform: translateY(0); }
+        .modal-close { 
+            position: absolute; top: 24px; right: 24px; background: var(--surface-hover); color: var(--text-muted); border: none; font-size: 20px; 
+            width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s;
+        }
+        .modal-close:hover { background: var(--border); color: var(--text-main); }
+        
+        /* Empty states */
+        .empty-state { text-align: center; padding: 48px 24px; color: var(--text-faint); font-size: 14px; font-weight: 500; background: var(--bg); border: 1px dashed var(--border); border-radius: var(--radius-md); }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-faint); }
+    </style>
+</head>
+<body>
+    <div class="header-wrapper">
+        <div class="header">
+            <div class="logo">
+                NEXUS <span>Intelligence Platform</span>
+            </div>
+            <div style="display: flex; gap: 16px; align-items: center;">
+                <button class="btn-outline" onclick="resetMemory()">Reset Memory</button>
+                <button id="btnDiscover" onclick="triggerDiscovery()">Run Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- LEFT COLUMN -->
+        <div class="col-left">
+            <div>
+                <div class="section-title">
+                    <span>NEXUS Autonomy</span>
+                    <div class="status-badge">
+                        <span id="uiAutoDot" class="status-dot idle"></span>
+                        <span id="uiAutoText">STANDBY</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="uiCurrentOpText" style="font-size: 14px; font-weight: 500; color: var(--text-main); margin-bottom: 8px;">Waiting for autonomous cycle</div>
+                    <div class="step-list" id="uiStepList"></div>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-title">
+                    <span>Discovered Topics</span>
+                    <span class="section-subtitle" id="uiTopicsCount">0 total</span>
+                </div>
+                <div class="topics-list" id="uiTopicsList">
+                    <div class="empty-state">No topics discovered.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CENTER COLUMN (FEED) -->
+        <div class="col-center">
+            <div class="section-title" style="padding-bottom: 16px; margin-bottom: 0;">
+                <span>NEXUS Feed</span>
+            </div>
+            <div class="feed-container" id="uiFeedContainer">
+                <div class="empty-state">NEXUS hasn't published anything yet.</div>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="col-right">
+            <div>
+                <div class="section-title">Intelligence Metrics</div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="value-lg" id="statPublished">0</div>
+                        <div class="stat-title">Published</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="value-lg" id="statAnalyzed">0</div>
+                        <div class="stat-title">Analyzed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="value-lg" id="statRejected">0</div>
+                        <div class="stat-title">Rejected</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="value-lg" id="statDups">0</div>
+                        <div class="stat-title">Dups Avoided</div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-title">Schedule</div>
+                <div class="card">
+                    <div class="kv-list">
+                        <div class="kv-item">
+                            <span class="kv-key">Last Cycle</span>
+                            <span class="kv-val" id="uiLastCycle">Never</span>
+                        </div>
+                        <div class="kv-item">
+                            <span class="kv-key">Next Cycle</span>
+                            <span class="kv-val" id="uiNextCycle">Pending...</span>
+                        </div>
+                        <div class="kv-item">
+                            <span class="kv-key">Status</span>
+                            <span class="kv-val" id="uiCycleStatus">Idle</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-title">Infrastructure</div>
+                <div class="card">
+                    <div class="kv-list">
+                        <div class="kv-item">
+                            <span class="kv-key">Search</span>
+                            <span class="kv-val"><span class="status-dot active"></span> Tavily</span>
+                        </div>
+                        <div class="kv-item">
+                            <span class="kv-key">AI Model</span>
+                            <span class="kv-val"><span class="status-dot active"></span> Nemotron</span>
+                        </div>
+                        <div class="kv-item">
+                            <span class="kv-key">Requests</span>
+                            <span class="kv-val" id="uiAIReqs">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Modal -->
+    <div class="modal-overlay" id="topicModal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal(event)">&times;</button>
+            <div class="section-subtitle" id="modHeaderType" style="margin-bottom: 12px; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px;">Topic Analysis</div>
+            
+            <h2 id="modTitle" style="font-size: 22px; font-weight: 700; margin-bottom: 24px; line-height: 1.4; color: var(--text-main);"></h2>
+            
+            <div style="display: flex; gap: 12px; margin-bottom: 32px;">
+                <span id="modStatus" class="pill"></span>
+                <span id="modCategory" class="pill" style="background: var(--bg); border: 1px solid var(--border); color: var(--text-muted);"></span>
+                <span id="modWordCount" class="pill" style="display: none; background: var(--bg); border: 1px solid var(--border); color: var(--text-muted);"></span>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 32px;">
+                <div id="modScoreSection" style="display: none;">
+                    <div class="section-title" style="margin-bottom: 8px;">Editorial Score</div>
+                    <div id="modScoreVal" style="font-size: 15px; color: var(--text-main); font-weight: 600;"></div>
+                </div>
+                
+                <div id="modReasonSection">
+                    <div class="section-title" style="margin-bottom: 8px;" id="modReasonTitle">Reasoning</div>
+                    <div id="modReasonText" style="font-size: 15px; color: var(--text-muted); line-height: 1.7;"></div>
+                </div>
+                
+                <div id="modWhyNowSection" style="display: none;">
+                    <div class="section-title" style="margin-bottom: 8px;">Why Now</div>
+                    <div id="modWhyNowText" style="font-size: 15px; color: var(--text-muted); line-height: 1.7;"></div>
+                </div>
+                
+                <div id="modSummarySection">
+                    <div class="section-title" style="margin-bottom: 8px;">Summary</div>
+                    <div id="modSummary" style="font-size: 15px; color: var(--text-muted); line-height: 1.7; background: var(--bg); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-light);"></div>
+                </div>
+
+                <div>
+                    <div class="section-title" style="margin-bottom: 8px;">Source</div>
+                    <a id="modSource" href="#" target="_blank" style="color: var(--primary); font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                        <span id="modSourceName"></span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let globalTopics = [];
+        let globalPosts = [];
+        let globalStateStatus = "Idle";
+
+        async function fetchStatus() {
+            try {
+                const res = await fetch('/dev/status');
+                const data = await res.json();
+                updateUI(data);
+            } catch (err) {
+                console.error("Failed to fetch status:", err);
+            }
+        }
+
+        function updateUI(state) {
+            globalStateStatus = state.status;
+            
+            // Autonomy Status
+            const autoDot = document.getElementById('uiAutoDot');
+            const autoText = document.getElementById('uiAutoText');
+            if (state.autonomy_status === 'ACTIVE') {
+                autoDot.className = 'status-dot active';
+                autoText.innerText = 'ACTIVE';
+            } else {
+                autoDot.className = 'status-dot idle';
+                autoText.innerText = state.autonomy_status || 'STANDBY';
+            }
+            
+            const btn = document.getElementById('btnDiscover');
+            if (state.status === "Running") {
+                btn.disabled = true;
+                btn.innerText = "Running...";
+            } else {
+                btn.disabled = false;
+                btn.innerText = "Run Now";
+            }
+
+            // Current Operation & Steps
+            const opText = document.getElementById('uiCurrentOpText');
+            if (state.status === 'Running') {
+                opText.innerText = state.current_operation || 'Working...';
+            } else {
+                opText.innerText = 'Waiting for autonomous cycle';
+            }
+            
+            renderSteps(state.status, state.current_operation);
+
+            // Stats
+            document.getElementById('statPublished').innerText = state.posts_published;
+            document.getElementById('statAnalyzed').innerText = state.topics_discovered;
+            document.getElementById('statRejected').innerText = state.topics_rejected;
+            document.getElementById('statDups').innerText = state.duplicate_topics_prevented;
+            
+            document.getElementById('uiTopicsCount').innerText = `${state.topics_discovered} total`;
+            document.getElementById('uiAIReqs').innerText = state.ai_requests_used;
+            
+            if (state.last_discovery_time) {
+                document.getElementById('uiLastCycle').innerText = new Date(state.last_discovery_time).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+            }
+            if (state.next_discovery_time) {
+                document.getElementById('uiNextCycle').innerText = new Date(state.next_discovery_time).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+            }
+            
+            if (state.cycle_history && state.cycle_history.length > 0) {
+                const last = state.cycle_history[0];
+                let summary = "";
+                if (last.status === 'Running') summary = "Running...";
+                else if (last.posts_created > 0) summary = `Published ${last.posts_created} post`;
+                else summary = `Analyzed ${last.topics_discovered} (0 passed limit)`;
+                
+                document.getElementById('uiCycleStatus').innerText = summary;
+            }
+
+            // Topics List
+            globalTopics = state.discovered_topics || [];
+            renderTopicsList();
+        }
+
+        function renderSteps(status, operation) {
+            const stepList = document.getElementById('uiStepList');
+            if (status === 'Idle' || status === 'Error') {
+                stepList.innerHTML = '';
+                return;
+            }
+            
+            const steps = [
+                { id: 'tavily', name: 'Discovery', match: 'Discovering' },
+                { id: 'eval', name: 'Editorial analysis', match: 'Evaluating' },
+                { id: 'gen', name: 'Writing', match: 'Generating' }
+            ];
+            
+            let html = '';
+            let foundCurrent = false;
+            
+            for (const step of steps) {
+                if (operation.includes(step.match)) {
+                    html += `<div class="step active"><div class="spinner"></div> ${step.name}</div>`;
+                    foundCurrent = true;
+                } else if (!foundCurrent) {
+                    html += `<div class="step done"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> ${step.name}</div>`;
+                } else {
+                    html += `<div class="step"><div style="width:14px; height:14px; border:2px solid var(--border); border-radius:50%;"></div> ${step.name}</div>`;
+                }
+            }
+            stepList.innerHTML = html;
+        }
+
+        function renderTopicsList() {
+            const container = document.getElementById('uiTopicsList');
+            if (globalTopics.length === 0) {
+                container.innerHTML = globalStateStatus === 'Running' ? 
+                    `<div class="empty-state">Analyzing data stream...</div>` : 
+                    `<div class="empty-state">No topics analyzed yet.</div>`;
+                return;
+            }
+
+            container.innerHTML = globalTopics.map((t, idx) => {
+                const statusClass = t.approved ? 'selected' : 'rejected';
+                const statusText = t.approved ? 'SELECTED' : 'REJECTED';
+                
+                return `
+                <div class="topic-item" onclick="openTopicModal(${idx})">
+                    <div class="topic-item-title">${t.title}</div>
+                    <div class="topic-item-meta">
+                        <span>${t.source_name}</span>
+                        <span class="pill ${statusClass}">${statusText}</span>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+
+        function openTopicModal(index) {
+            const t = globalTopics[index];
+            if (!t) return;
+            
+            document.getElementById('modHeaderType').innerText = "Topic Analysis";
+            document.getElementById('modTitle').innerText = t.title;
+            document.getElementById('modCategory').innerText = t.category;
+            document.getElementById('modCategory').style.display = 'block';
+            document.getElementById('modWordCount').style.display = 'none';
+            
+            const statusPill = document.getElementById('modStatus');
+            statusPill.className = 'pill ' + (t.approved ? 'selected' : 'rejected');
+            statusPill.innerText = t.approved ? 'SELECTED' : 'REJECTED';
+            
+            document.getElementById('modSummary').innerText = t.summary;
+            document.getElementById('modSummarySection').style.display = 'block';
+            
+            document.getElementById('modSourceName').innerText = t.source_name;
+            document.getElementById('modSource').href = t.source_url;
+            
+            const reasonTitle = document.getElementById('modReasonTitle');
+            const reasonText = document.getElementById('modReasonText');
+            
+            if (t.approved) {
+                reasonTitle.innerText = "Editorial Status";
+                reasonText.innerText = "Passed editorial threshold. Selected for publishing.";
+            } else {
+                reasonTitle.innerText = "Rejection Reason";
+                reasonText.innerText = t.rejection_reason || "Failed editorial threshold.";
+            }
+            
+            document.getElementById('modScoreSection').style.display = 'none';
+            document.getElementById('modWhyNowSection').style.display = 'none';
+            
+            document.getElementById('topicModal').classList.add('open');
+        }
+
+        function openPostModal(index) {
+            const p = globalPosts[index];
+            if (!p) return;
+            
+            document.getElementById('modHeaderType').innerText = "Post Publication Metadata";
+            document.getElementById('modTitle').innerText = p.topic_title;
+            
+            document.getElementById('modCategory').style.display = 'none';
+            
+            const wordPill = document.getElementById('modWordCount');
+            wordPill.style.display = 'block';
+            wordPill.innerText = `${p.word_count || '?'} / 100 words`;
+            
+            const statusPill = document.getElementById('modStatus');
+            statusPill.className = 'pill selected';
+            statusPill.innerText = 'PUBLISHED';
+            
+            document.getElementById('modSummarySection').style.display = 'none';
+            
+            document.getElementById('modSourceName').innerText = p.source_names[0];
+            document.getElementById('modSource').href = p.source_urls[0];
+            
+            const reasonTitle = document.getElementById('modReasonTitle');
+            const reasonText = document.getElementById('modReasonText');
+            reasonTitle.innerText = "Why Selected";
+            reasonText.innerText = p.why_selected || "Meets editorial threshold.";
+            
+            if (p.why_now) {
+                document.getElementById('modWhyNowSection').style.display = 'block';
+                document.getElementById('modWhyNowText').innerText = p.why_now;
+            } else {
+                document.getElementById('modWhyNowSection').style.display = 'none';
+            }
+            
+            if (p.editorial_score) {
+                document.getElementById('modScoreSection').style.display = 'block';
+                document.getElementById('modScoreVal').innerText = `${p.editorial_score}/100`;
+            } else {
+                document.getElementById('modScoreSection').style.display = 'none';
+            }
+            
+            document.getElementById('topicModal').classList.add('open');
+        }
+
+        function closeModal(e) {
+            document.getElementById('topicModal').classList.remove('open');
+        }
+
+        async function triggerDiscovery() {
+            try {
+                await fetch('/dev/discover', { method: 'POST' });
+                fetchStatus();
+            } catch (err) {
+                alert("Failed to start discovery.");
+            }
+        }
+
+        async function fetchFeed() {
+            try {
+                const res = await fetch('/dev/feed');
+                const data = await res.json();
+                const container = document.getElementById('uiFeedContainer');
+                
+                if (!data.posts || data.posts.length === 0) {
+                    container.innerHTML = `<div class="empty-state">NEXUS hasn't published anything yet.</div>`;
+                    return;
+                }
+                
+                // Only re-render if posts changed
+                if (globalPosts.length !== data.posts.length || (globalPosts.length > 0 && globalPosts[0].id !== data.posts[0].id)) {
+                    globalPosts = data.posts;
+                    
+                    container.innerHTML = data.posts.map((p, idx) => {
+                        const date = new Date(p.publication_timestamp).toLocaleDateString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+                        // Simple 5-minute freshness check
+                        const isNew = (new Date() - new Date(p.publication_timestamp)) < 5 * 60 * 1000;
+                        const badge = isNew ? `<div class="new-indicator">NEW</div>` : '';
+                        
+                        return `
+                        <div class="social-post">
+                            ${badge}
+                            <div class="post-header">
+                                <div class="avatar">N</div>
+                                <div class="post-meta">
+                                    <span class="post-author">NEXUS</span>
+                                    <span class="post-handle">@nexus_ai</span>
+                                </div>
+                                <div class="post-actions">
+                                    <span class="post-time">${date}</span>
+                                    <button class="btn-info" onclick="openPostModal(${idx})">i</button>
+                                </div>
+                            </div>
+                            <div class="post-content">${p.post_text}</div>
+                        </div>
+                        `;
+                    }).join('');
+                }
+            } catch (err) {
+                console.error("Failed to fetch feed:", err);
+            }
+        }
+
+        async function resetMemory() {
+            if (confirm("Reset all NEXUS memory? This cannot be undone.")) {
+                try {
+                    await fetch('/dev/memory/reset', { method: 'POST' });
+                    globalPosts = []; // Force re-render
+                    fetchStatus();
+                    fetchFeed();
+                } catch (err) {
+                    alert("Failed to reset memory.");
+                }
+            }
+        }
+
+        // Initialize loops
+        setInterval(() => {
+            fetchStatus();
+            fetchFeed();
+        }, 2500);
+        
+        fetchStatus();
+        fetchFeed();
+    </script>
+</body>
+</html>
