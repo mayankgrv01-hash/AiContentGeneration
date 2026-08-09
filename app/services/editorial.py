@@ -268,24 +268,22 @@ def run_discovery_cycle(agent_id: Optional[str] = None):
         state.topics_discovered = len(evaluated_topics)
         state.last_discovery_time = datetime.now()
         
-        cycle_record["completed_at"] = datetime.now().isoformat()
+        cycle_record["completed_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         cycle_record["status"] = "Completed"
-        
-        state.status = "Idle"
-        state.current_operation = "None"
         state.log("Discovery cycle completed successfully.")
         
     except Exception as e:
-        state.status = "Error"
-        state.current_operation = f"Failed: {str(e)}"
-        
-        cycle_record["completed_at"] = datetime.now().isoformat()
+        cycle_record["completed_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         cycle_record["status"] = "Error"
-        
+        cycle_record["error"] = str(e)
         state.log(f"Error during discovery cycle: {e}")
         logger.error(f"Discovery cycle failed: {e}")
 
     finally:
+        # Always reset state so future cycles are not blocked
+        state.status = "Idle"
+        state.current_operation = "None"
+        state.last_discovery_time = datetime.now()
         state.cycle_history.insert(0, cycle_record)
         if len(state.cycle_history) > 20:
             state.cycle_history.pop()
