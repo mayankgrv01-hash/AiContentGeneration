@@ -1,6 +1,6 @@
 """
 Feed Response Checker
-Checks the current state of a NEXUS agent feed and validates every post against the evaluator schema.
+Checks the current state of a CODEBLOODED agent feed and validates every post against the evaluator schema.
 
 Usage:
     python3 test_feed.py <agentId>

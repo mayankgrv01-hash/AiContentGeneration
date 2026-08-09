@@ -9,4 +9,4 @@ def setup_logging():
     logging.getLogger("httpx").setLevel(logging.WARNING)
 
 setup_logging()
-logger = logging.getLogger("nexus")
+logger = logging.getLogger("codeblooded")

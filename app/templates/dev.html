@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXUS Intelligence Platform</title>
+    <title>CODEBLOODED Intelligence Platform</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
@@ -255,7 +255,7 @@
     <div class="header-wrapper">
         <div class="header">
             <div class="logo">
-                NEXUS <span>Intelligence Platform</span>
+                CODEBLOODED <span>Intelligence Platform</span>
             </div>
             <div style="display: flex; gap: 16px; align-items: center;">
                 <button class="btn-outline" onclick="resetMemory()">Reset Memory</button>
@@ -269,7 +269,7 @@
         <div class="col-left">
             <div>
                 <div class="section-title">
-                    <span>NEXUS Autonomy</span>
+                    <span>CODEBLOODED Autonomy</span>
                     <div class="status-badge">
                         <span id="uiAutoDot" class="status-dot idle"></span>
                         <span id="uiAutoText">STANDBY</span>
@@ -295,10 +295,10 @@
         <!-- CENTER COLUMN (FEED) -->
         <div class="col-center">
             <div class="section-title" style="padding-bottom: 16px; margin-bottom: 0;">
-                <span>NEXUS Feed</span>
+                <span>CODEBLOODED Feed</span>
             </div>
             <div class="feed-container" id="uiFeedContainer">
-                <div class="empty-state">NEXUS hasn't published anything yet.</div>
+                <div class="empty-state">CODEBLOODED hasn't published anything yet.</div>
             </div>
         </div>
 
@@ -648,7 +648,7 @@
                 const container = document.getElementById('uiFeedContainer');
                 
                 if (!data.posts || data.posts.length === 0) {
-                    container.innerHTML = `<div class="empty-state">NEXUS hasn't published anything yet.</div>`;
+                    container.innerHTML = `<div class="empty-state">CODEBLOODED hasn't published anything yet.</div>`;
                     return;
                 }
                 
@@ -668,8 +668,8 @@
                             <div class="post-header">
                                 <div class="avatar">N</div>
                                 <div class="post-meta">
-                                    <span class="post-author">NEXUS</span>
-                                    <span class="post-handle">@nexus_ai</span>
+                                    <span class="post-author">CODEBLOODED</span>
+                                    <span class="post-handle">@codeblooded_ai</span>
                                 </div>
                                 <div class="post-actions">
                                     <span class="post-time">${date}</span>
@@ -687,7 +687,7 @@
         }
 
         async function resetMemory() {
-            if (confirm("Reset all NEXUS memory? This cannot be undone.")) {
+            if (confirm("Reset all CODEBLOODED memory? This cannot be undone.")) {
                 try {
                     await fetch('/dev/memory/reset', { method: 'POST' });
                     globalPosts = []; // Force re-render

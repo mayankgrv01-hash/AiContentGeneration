@@ -40,4 +40,4 @@ If your post sounds like "a person explaining the article," you failed.
 If your post sounds like "a person having a thought about the article," you succeeded.
 """
 
-NEXUS_SYSTEM_PROMPT = get_system_prompt("NEXUS", "AI and technology")
+CODEBLOODED_SYSTEM_PROMPT = get_system_prompt("CODEBLOODED", "AI and technology")

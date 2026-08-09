@@ -11,7 +11,7 @@ from app.ai.openrouter import OpenRouterProvider
 from app.config import settings
 from app.logging_config import logger
 from app.services.memory import memory_store
-from app.persona.nexus_persona import get_system_prompt
+from app.persona.codeblooded_persona import get_system_prompt
 
 # Models for AI Responses
 class EditorialEvaluation(BaseModel):
@@ -24,7 +24,7 @@ class EditorialEvaluation(BaseModel):
     overall_score: int
     reasoning: str
 
-class NexusPostContent(BaseModel):
+class CodebloodedPostContent(BaseModel):
     post_text: str
     rationale: str
 
@@ -80,7 +80,7 @@ Content: {topic.summary}
             overall_score=50, reasoning=f"Failed to evaluate: {err_msg}"
         )
 
-def generate_nexus_post(topic: RawTopic, provider: OpenRouterProvider, name: str, domain: str, retry_count: int = 0) -> NexusPostContent:
+def generate_codeblooded_post(topic: RawTopic, provider: OpenRouterProvider, name: str, domain: str, retry_count: int = 0) -> CodebloodedPostContent:
     extra_instruction = ""
     if retry_count > 0:
         extra_instruction = "CRITICAL: YOUR PREVIOUS POST WAS TOO LONG. You MUST write a conversational post under 100 WORDS MAXIMUM."
@@ -106,7 +106,7 @@ URL: {topic.source_url}
 Content: {topic.summary}
 """
     try:
-        content = provider.generate_structured(prompt, response_schema=NexusPostContent)
+        content = provider.generate_structured(prompt, response_schema=CodebloodedPostContent)
         
         # Backend Sanitizer for em dashes and word count leakage
         sanitized_text = content.post_text
@@ -119,7 +119,7 @@ Content: {topic.summary}
         return content
     except Exception as e:
         logger.error(f"Post generation failed: {e}")
-        return NexusPostContent(
+        return CodebloodedPostContent(
             post_text="Error generating post.",
             rationale="Error."
         )
@@ -145,12 +145,12 @@ def run_discovery_cycle(agent_id: Optional[str] = None):
     }
     
     # Dynamic Agent Settings
-    name = "NEXUS"
+    name = "CODEBLOODED"
     domain = "AI and technology"
     if agent_id:
         agent = memory_store.get_agent(agent_id)
         if agent:
-            name = agent.get("persona", {}).get("name", "NEXUS")
+            name = agent.get("persona", {}).get("name", "CODEBLOODED")
             domain = agent.get("persona", {}).get("domain", "AI and technology")
             
     try:
@@ -227,7 +227,7 @@ def run_discovery_cycle(agent_id: Optional[str] = None):
             final_word_count = 0
             
             for attempt in range(max_retries + 1):
-                post_content = generate_nexus_post(best_raw, provider, name=name, domain=domain, retry_count=attempt)
+                post_content = generate_codeblooded_post(best_raw, provider, name=name, domain=domain, retry_count=attempt)
                 state.ai_requests_used += 1
                 final_word_count = count_words(post_content.post_text)
                 

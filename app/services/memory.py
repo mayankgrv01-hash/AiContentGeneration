@@ -50,7 +50,7 @@ class MemoryStore(ABC):
         pass
 
 class LocalJsonMemoryStore(MemoryStore):
-    def __init__(self, filepath: str = "data/nexus_memory.json"):
+    def __init__(self, filepath: str = "data/codeblooded_memory.json"):
         self.filepath = filepath
         self._ensure_file_exists()
 
@@ -147,7 +147,7 @@ class LocalJsonMemoryStore(MemoryStore):
 
 
 class MongoDbMemoryStore(MemoryStore):
-    def __init__(self, uri: str, db_name: str = "nexus_db"):
+    def __init__(self, uri: str, db_name: str = "codeblooded_db"):
         self.client = MongoClient(uri, tlsCAFile=certifi.where())
         self.db = self.client[db_name]
         self.agents_col = self.db["agents"]

@@ -5,24 +5,24 @@ from app.api.xpost import router as xpost_router
 from app.api.agent import router as agent_router
 from app.scheduler import start_scheduler, stop_scheduler
 
-app = FastAPI(title="NEXUS")
+app = FastAPI(title="CODEBLOODED")
 app.include_router(dev_router)
 app.include_router(xpost_router)
 app.include_router(agent_router)
 
 @app.on_event("startup")
 async def startup_event():
-    logger.info("NEXUS application starting up...")
+    logger.info("CODEBLOODED application starting up...")
     start_scheduler()
 
 @app.on_event("shutdown")
 async def shutdown_event():
-    logger.info("NEXUS application shutting down...")
+    logger.info("CODEBLOODED application shutting down...")
     stop_scheduler()
 
 @app.get("/health")
 def health_check():
     return {
         "status": "ok",
-        "service": "NEXUS"
+        "service": "CODEBLOODED"
     }

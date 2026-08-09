@@ -16,7 +16,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
 )
-logger = logging.getLogger("nexus.cron")
+logger = logging.getLogger("codeblooded.cron")
 
 
 def main():
@@ -27,7 +27,7 @@ def main():
         from app.services.editorial import run_discovery_cycle
         from app.config import settings
     except Exception as e:
-        logger.error(f"Failed to import NEXUS modules: {e}")
+        logger.error(f"Failed to import CODEBLOODED modules: {e}")
         sys.exit(1)
 
     # Resolve agent_id
@@ -45,7 +45,7 @@ def main():
                 reverse=True
             )
             agent_id = agents_sorted[0].get("agentId")
-            agent_name = agents_sorted[0].get("persona", {}).get("name", "NEXUS")
+            agent_name = agents_sorted[0].get("persona", {}).get("name", "CODEBLOODED")
             agent_domain = agents_sorted[0].get("persona", {}).get("domain", "AI")
             logger.info(f"Using agent: {agent_id} | Name: {agent_name} | Domain: {agent_domain}")
         except Exception as e:

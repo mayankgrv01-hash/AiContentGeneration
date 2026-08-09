@@ -104,7 +104,7 @@ def get_agent_status(agentId: Optional[str] = None):
                 "initialized_at": agent.get("created_at"),
             }
     else:
-        # Return global NEXUS status
+        # Return global CODEBLOODED status
         agents = memory_store.get_active_agents()
         initialized = len(agents) > 0
         active = initialized

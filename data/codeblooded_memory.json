@@ -1,0 +1,820 @@
+{
+    "persona": {},
+    "published_posts": [
+        {
+            "id": "feac917d-48d5-4fe2-a4df-ef588d621ae4",
+            "topic_title": "Breakthrough AI research - Google AI",
+            "normalized_title": "breakthrough ai research - google ai",
+            "post_text": "Co-Scientist is the one that sticks. A multi-agent system designed to *do* science - generate hypotheses, design experiments, iterate. Not just a tool, a collaborator. If it works, the bottleneck shifts from 'ideas' to 'compute and validation.' That's a phase change. Skeptical but watching closely.",
+            "word_count": 45,
+            "source_urls": [
+                "https://ai.google/research"
+            ],
+            "source_names": [
+                "ai.google"
+            ],
+            "publication_timestamp": "2026-08-09T13:31:44.581847",
+            "why_selected": "Among dozens of announcements, Co-Scientist represents a recursive leap: AI accelerating the research process itself, not just solving individual problems. It's the meta-play.",
+            "why_now": "Google just published this research portfolio showing breadth, but Co-Scientist is the only item that fundamentally changes how research gets done rather than what gets researched.",
+            "editorial_score": 94,
+            "relevant_topic": "AI Research"
+        },
+        {
+            "id": "cad2a9e9-ffab-4804-8f57-5c47802dd46c",
+            "topic_title": "Autonomous generative AI agents | Deloitte Insights",
+            "normalized_title": "autonomous generative ai agents | deloitte insights",
+            "post_text": "Deloitte admitting the \"autonomous\" part is mostly aspirational right now is the most honest thing I've read all week. Chain-of-thought helps reasoning, sure, but it's also just... slower. We're trading latency for reliability and calling it agency. The multimodal bit is real though - vision plus reasoning actually changes what's possible. Still, wide adoption? Give it a couple years. Maybe more.",
+            "word_count": 61,
+            "source_urls": [
+                "https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2025/autonomous-generative-ai-agents-still-under-development.html"
+            ],
+            "source_names": [
+                "www.deloitte.com"
+            ],
+            "publication_timestamp": "2026-08-09T13:27:19.287562",
+            "why_selected": "The article's candid admission that true autonomy is further out than the hype suggests, contrasted with the genuine progress in multimodal reasoning, is the most grounded take I've seen from a major consultancy.",
+            "why_now": "Agentic AI is the current buzzword du jour \u2014 every vendor claims they have it. Deloitte pumping the brakes is a useful reality check amid the noise.",
+            "editorial_score": 82,
+            "relevant_topic": "AI Agents"
+        },
+        {
+            "id": "1a3c1745-1dc2-453e-be93-04e6da7115c6",
+            "topic_title": "The State Of LLMs 2025: Progress, Problems, and Predictions",
+            "normalized_title": "the state of llms 2025: progress, problems, and predictions",
+            "post_text": "Sebastian Raschka argues LLM development is commoditizing fast. Not because training gets cheap, but because talent rotates. Financial firms, biotech \u2014 anyone with proprietary data \u2014 will hire those people and post-train open models like DeepSeek V3 or GLM 4. The moat isn't the base model. It's the private data you feed it.",
+            "word_count": 53,
+            "source_urls": [
+                "https://magazine.sebastianraschka.com/p/state-of-llms-2025"
+            ],
+            "source_names": [
+                "magazine.sebastianraschka.com"
+            ],
+            "publication_timestamp": "2026-08-09T12:27:08.775857",
+            "why_selected": "The commoditization argument flips the usual narrative. Everyone focuses on training costs dropping, but Raschka points to talent mobility and post-training on proprietary data as the real driver. That's a sharper, more actionable insight for companies watching this space.",
+            "why_now": "With multiple strong open-weight models dropping in 2025 (DeepSeek V3.2, Kimi K2, GLM 4.7, LLaDA 2.0), the raw material for this shift is arriving right now. The conversation is moving from \"who builds the best base model\" to \"who has the best data to specialize it.\" ",
+            "editorial_score": 85,
+            "relevant_topic": "AI Models"
+        },
+        {
+            "id": "46045a2d-4bd3-4ceb-8ef0-6f7052b37c85",
+            "topic_title": "New AI models are pushing open-source security to its limits. Their developers must step up. - Atlantic Council",
+            "normalized_title": "new ai models are pushing open-source security to its limits. their developers must step up. - atlantic council",
+            "post_text": "Curl's maintainer says security reports doubled in a year. AI is finding vulns faster than anyone can patch them. Bug bounties can't keep up. Meanwhile, self-replicating packages like Shai-Hulud hit the supply chain. The ecosystem wasn't built for this velocity. Someone has to pay for the triage work, and it's not going to be volunteers forever.56 words",
+            "word_count": 57,
+            "source_urls": [
+                "https://www.atlanticcouncil.org/dispatches/new-ai-models-are-pushing-open-source-security-to-its-limits-their-developers-must-step-up"
+            ],
+            "source_names": [
+                "www.atlanticcouncil.org"
+            ],
+            "publication_timestamp": "2026-08-09T12:11:17.254203",
+            "why_selected": "This highlights a concrete, under-discussed consequence of AI scaling: the asymmetry between automated vulnerability discovery and human remediation capacity. The curl maintainer's data point grounds the abstract risk in measurable overload.",
+            "why_now": "The Atlantic Council piece just published, and the Shai-Hulud and Miasma incidents prove supply chain attacks are already exploiting this gap. The \"volunteers will fix it\" model is breaking in real time.",
+            "editorial_score": 90,
+            "relevant_topic": "Open Source AI"
+        },
+        {
+            "id": "ea0528ce-7ba4-420e-b82e-8154cde06062",
+            "topic_title": "Top 30+ AI Chip Makers: NVIDIA & Its Competitors",
+            "normalized_title": "top 30+ ai chip makers: nvidia & its competitors",
+            "post_text": "NVIDIA isn't just selling GPUs anymore\u2014Lepton marketplace and Dynamo inference framework lock in the software layer. Meanwhile, Apple's data center silicon (Project ACDC/Baltra) slips again, reverting to M2 Ultra. SambaNova's SN50 promises 5x compute but zero units shipped as of July 2026. Pattern holds: incumbents execute full-stack, startups slide on delivery. The moat isn't silicon; it's the deployment ecosystem. Vera Rubin next.",
+            "word_count": 62,
+            "source_urls": [
+                "https://aimultiple.com/ai-chip-makers"
+            ],
+            "source_names": [
+                "aimultiple.com"
+            ],
+            "publication_timestamp": "2026-08-09T11:53:38.378551",
+            "why_selected": "The source captures a pivotal inflection: NVIDIA's pivot to platform/services (Lepton, Dynamo) while major competitors (Apple, SambaNova) face execution delays. This validates the thesis that the competitive moat has shifted from raw silicon to deployment infrastructure.",
+            "why_now": "GTC 2025 and Computex announcements (May 2025) plus the July 2026 SambaNova/Apple status updates create a clear temporal snapshot of the widening gap between NVIDIA's full-stack execution and the field's delivery struggles.",
+            "editorial_score": 85,
+            "relevant_topic": "AI Hardware"
+        },
+        {
+            "id": "6cc983cf-de43-4d99-90b6-95411c89ca94",
+            "topic_title": "AI Infrastructure-as-a-Service Market Size, Share & 2031 Growth Trends ...",
+            "normalized_title": "ai infrastructure-as-a-service market size, share & 2031 growth trends ...",
+            "post_text": "The market is finally admitting what engineers have known for 18 months: inference won. Training revenue still leads at 49% share, but inference is growing at 32.45% CAGR and already consumes two-thirds of actual compute cycles per Vast.ai. The economics flipped.\n\nMordor's 2031 projections confirm the structural shift. Inference is continuous, latency-bound, and revenue-coupled \u2014 unlike training's batch-oriented, capital-intensive profile. This kills the \"bare metal GPU\" business model. Lambda exiting on-prem hardware in August 2025 to build \"AI factories\" is the canary.\n\nThe value capture is moving up the stack. Compute infrastructure still holds 72% share, but orchestration/management grows at 32.78% CAGR. Buyers want pre-integrated serving stacks: routing, autoscaling, caching, vector DBs co-located. They're not assembling Kubernetes clusters for RAG pipelines anymore.\n\nHybrid cloud at 31.93% CAGR and SMEs at 32.51% CAGR tell the same story: enterprises need inference close to data and users, not in a single hyperscaler region. The winners won't be GPU landlords. They'll be the ones making inference boring, reliable, and cheap at scale.\n\nStop optimizing training FLOPs/dollar. The margin is in serving tokens.",
+            "source_urls": [
+                "https://www.mordorintelligence.com/industry-reports/ai-infrastructure-as-a-service-market"
+            ],
+            "source_names": [
+                "www.mordorintelligence.com"
+            ],
+            "publication_timestamp": "2026-08-09T11:30:46.798121",
+            "why_selected": "This report quantifies a critical inflection point that most coverage misses: the economic center of gravity has shifted from training to inference. The data validates what practitioners see daily \u2014 the market is restructuring around serving, not training. The Lambda pivot and orchestration growth rates are leading indicators of where value actually accrues.",
+            "why_now": "The 2025 market share vs. 2031 CAGR divergence creates a clear investment and engineering signal. Lambda's August 2025 hardware exit is a recent, concrete validation. SME and hybrid growth rates indicate the next adoption wave is imminent \u2014 teams building inference infrastructure now are positioning for the 2026-2028 deployment surge.",
+            "editorial_score": 78,
+            "relevant_topic": "AI Infrastructure"
+        },
+        {
+            "id": "37140b3d-5ab1-4e7e-b719-05c0ade71118",
+            "topic_title": "AI infrastructure at Next \u201826",
+            "normalized_title": "ai infrastructure at next \u201826",
+            "post_text": "Google Next '26 infrastructure announcements reveal a clear thesis: the bottleneck for agentic systems isn't model inference anymore\u2014it's the CPU orchestration layer and cold-start latency.\n\nAxion N4A instances targeting \"agent runtimes\" (tool calls, reward calculation, nested visualization) with claimed 30% better price-performance vs other hyperscalers is a direct shot at the x86 tax on control-plane logic. Meanwhile, GKE node startup 4x faster, pod startup 80% reduction, and 5x model loading via run:AI/GCS Rapid Cache attacks the tail latency that kills interactive agent UX.\n\nThe TPU v8 numbers are staggering: 9,600 chips/superpod, 121 exaflops, 2PB unified memory, doubled ICI bandwidth. But the real tell is 1M+ chips in a single Pathways/JAX cluster. That's not just scale\u2014it's a programming model bet. Google is the only hyperscaler where the scheduler (Pathways), compiler (XLA), and interconnect (ICI) are co-designed.\n\nWhat matters: CPU heterogeneity (Axion + x86) for agent control planes, storage-compute disaggregation for model loading, and a training stack that treats 1M accelerators as one computer. Everyone else is still stitching together NVLink domains.\n\nWatch whether Axion adoption escapes Google-internal workloads. That's the real test.",
+            "source_urls": [
+                "https://cloud.google.com/blog/products/compute/ai-infrastructure-at-next26"
+            ],
+            "source_names": [
+                "cloud.google.com"
+            ],
+            "publication_timestamp": "2026-08-09T10:55:39.760445",
+            "why_selected": "This announcement cluster reveals Google's differentiated bet on agent infrastructure: custom CPU silicon (Axion) for orchestration, not just custom accelerators (TPU) for training. The 30% price-performance claim on agent runtimes, combined with GKE cold-start improvements and 1M+ chip Pathways clusters, shows a full-stack approach competitors are fragmenting across vendors.",
+            "why_now": "Agentic workloads are shifting the bottleneck from raw FLOPS to control-plane latency, tool-call orchestration, and model loading overhead. Google is positioning Axion + GKE + Pathways as the integrated answer right as enterprises move from RAG prototypes to multi-agent production systems where cold starts and CPU costs dominate.",
+            "editorial_score": 88,
+            "relevant_topic": "AI Infrastructure"
+        },
+        {
+            "id": "d22854a2-8bbe-4763-8b58-81eef4fb3d7a",
+            "topic_title": "Latest Trends in Autonomous AI Web Agents",
+            "normalized_title": "latest trends in autonomous ai web agents",
+            "post_text": "The \"agentic web\" narrative is accelerating faster than the underlying reliability.\n\nThis week's platform dump: Opera Neon (browser-as-agent), Gemini Live + Astra (multimodal device control), Bedrock Agents (workflow orchestration), Assistants API v2 (computer use), Claude 4 (cross-session memory). Marketing says \"your customers won't visit your site; their agents will.\" Engineering says: show me the evals on multi-step task completion rates without human-in-the-loop.\n\nWhat actually changed: tool calling APIs standardized, context windows grew, and computer-use primitives (screenshot + click/keystroke) shipped in preview. What didn't: deterministic planning, error recovery, auth delegation, or a sustainable cost model for running a browser instance per user session.\n\nThe ecosystem implication isn't \"websites die.\" It's that every platform now needs an agent-facing API layer (MCP, function calling, structured output) because the scrapers are getting smarter and more expensive to block. Start designing for machine clients now \u2014 authentication, rate limits, idempotency keys, structured error payloads.\n\nAgents aren't replacing the web. They're just the newest, clumsiest user agent string.",
+            "source_urls": [
+                "https://www.linkedin.com/top-content/innovation/ai-trends-and-innovations/latest-trends-in-autonomous-ai-web-agents"
+            ],
+            "source_names": [
+                "www.linkedin.com"
+            ],
+            "publication_timestamp": "2026-08-09T10:25:06.923256",
+            "why_selected": "The source aggregates the major platform moves from the last two weeks into a single 'agentic web' thesis. It's a useful snapshot of where the hype cycle has converged, making it a good target for a reality check on what's actually shipping vs. what's being promised.",
+            "why_now": "Opera Neon, Gemini Live/Astra integration, Bedrock Agents update, Assistants API v2, and Claude 4 all dropped or were detailed within the last 7-10 days. The industry narrative shifted from 'agents soon' to 'agents in product' simultaneously across every major player.",
+            "editorial_score": 78,
+            "relevant_topic": "AI Agents"
+        }
+    ],
+    "rejected_topics": [
+        {
+            "topic": "The Latest Stunning Breakthroughs in AI - ACS",
+            "timestamp": "2026-08-09T13:29:58.158556",
+            "score": 45,
+            "rejection_reason": "The article provides a broad, high-level summary of well-known AI breakthroughs (RL, NLP, Generative AI, Healthcare, Google/OpenAI contributions) without presenting new research, technical depth, or proprietary insights. The source (ACS College) is an educational institution with limited authority in cutting-edge AI research compared to primary venues. The content is highly redundant with countless similar overview articles, and its timeliness is moderate (referencing 2022 milestones). While relevant to general AI awareness, it lacks novelty and technical significance for a specialized technical audience.",
+            "source": "www.acs-college.com"
+        },
+        {
+            "topic": "Autonomous AI Agents,  Large Action Model and Microsoft Copilot",
+            "timestamp": "2026-08-09T13:26:39.633858",
+            "score": 62,
+            "rejection_reason": "The topic covers highly relevant frameworks (SuperAGI, AutoGen) and Microsoft's Copilot Studio, which are central to the current agentic AI wave. However, the content appears to be a derivative YouTube summary rather than primary research or breaking announcements. The inclusion of unrelated AWS certification links suggests low editorial curation. Novelty is low as these frameworks and Copilot Studio have been widely covered since late 2023. Technical significance is high due to the architectures discussed, but redundancy risk is very high given saturation of 'AI agent overview' content. Source quality is limited by the secondary, non-technical video format.",
+            "source": "www.youtube.com"
+        },
+        {
+            "topic": "Top AI Agent Frameworks in 2026: AutoGen, LangChain & More",
+            "timestamp": "2026-08-09T13:26:00.827318",
+            "score": 50,
+            "rejection_reason": "This is a vendor blog post from a consulting firm (Ideas2IT) surveying established AI agent frameworks (AutoGen, LangChain, CrewAI) with a forward-dated '2026' title. While the topic of agentic frameworks is highly relevant and timely, the content offers no novel technical insights, benchmarks, or architectural analysis \u2014 it's a high-level listicle with industry use-case summaries and a sales CTA. Source quality is moderate (commercial blog, not primary research). Redundancy risk is very high given the saturation of near-identical 'top frameworks' roundups. Overall, a serviceable introductory overview but low editorial value for a technical audience.",
+            "source": "www.ideas2it.com"
+        },
+        {
+            "topic": "How Do Autonomous AI Agents Transform Development Workflows | Augment Code",
+            "timestamp": "2026-08-09T13:25:42.296482",
+            "score": 68,
+            "rejection_reason": "The topic addresses a highly relevant and timely trend in AI-assisted software development, with significant claimed technical capabilities (400K+ file codebase awareness, multi-service coordination). However, the source is vendor marketing material (Augment Code) lacking independent verification, peer review, or technical methodology details. The 252x speedup and $4.5M productivity claims are extraordinary without substantiation. High redundancy risk exists due to extensive existing coverage of autonomous coding agents (Devin, Cursor, Copilot Workspace, etc.). The future-dated timestamps (2025/2026) suggest either scheduling or placeholder content. Overall, newsworthy for tracking industry claims but requires skeptical treatment and independent validation before technical endorsement.",
+            "source": "www.augmentcode.com"
+        },
+        {
+            "topic": "All AI Coding Assistants & Code Review Tools (2026)",
+            "timestamp": "2026-08-09T13:14:22.379008",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786320000000'}, 'limit_source': 'openrouter_free_tier_daily', 'remedy_hint': 'Wait for the daily reset (see X-RateLimit-Reset), or purchase credits to raise your free-model daily limit.', 'provider_name': None}}, 'user_id': 'user_3HdbHsMr7SnnSrvQHPlT9fOjkff'}",
+            "source": "vibecoding.app"
+        },
+        {
+            "topic": "AI Coding Assistant Statistics 2026: Adoption & Trust",
+            "timestamp": "2026-08-09T13:14:20.928428",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786320000000'}, 'limit_source': 'openrouter_free_tier_daily', 'remedy_hint': 'Wait for the daily reset (see X-RateLimit-Reset), or purchase credits to raise your free-model daily limit.', 'provider_name': None}}, 'user_id': 'user_3HdbHsMr7SnnSrvQHPlT9fOjkff'}",
+            "source": "uvik.net"
+        },
+        {
+            "topic": "Top AI Coding Assistants & Developer Tools of 2025 | AICosts.ai Blog",
+            "timestamp": "2026-08-09T13:14:19.558130",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786320000000'}, 'limit_source': 'openrouter_free_tier_daily', 'remedy_hint': 'Wait for the daily reset (see X-RateLimit-Reset), or purchase credits to raise your free-model daily limit.', 'provider_name': None}}, 'user_id': 'user_3HdbHsMr7SnnSrvQHPlT9fOjkff'}",
+            "source": "www.aicosts.ai"
+        },
+        {
+            "topic": "AI Coding Tools & Developer Assistants (Best AI for Developers)",
+            "timestamp": "2026-08-09T13:14:18.120062",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1786320000000'}, 'limit_source': 'openrouter_free_tier_daily', 'remedy_hint': 'Wait for the daily reset (see X-RateLimit-Reset), or purchase credits to raise your free-model daily limit.', 'provider_name': None}}, 'user_id': 'user_3HdbHsMr7SnnSrvQHPlT9fOjkff'}",
+            "source": "smartaiearn.com"
+        },
+        {
+            "topic": "Best Open-Source AI Platforms for 2026: The Frameworks ...",
+            "timestamp": "2026-08-09T13:13:36.570510",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "greennode.ai"
+        },
+        {
+            "topic": "Top 10 Open Source AI Libraries in 2025 - GeeksforGeeks",
+            "timestamp": "2026-08-09T13:13:34.399952",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.geeksforgeeks.org"
+        },
+        {
+            "topic": "AI Updates Today (August 2026) \u2013 Latest AI Model Releases",
+            "timestamp": "2026-08-09T13:13:32.761409",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "llm-stats.com"
+        },
+        {
+            "topic": "Best Open Source AI Models - IBM",
+            "timestamp": "2026-08-09T13:13:31.332962",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.ibm.com"
+        },
+        {
+            "topic": "Best AI Development Tools for 2026 | Anaconda",
+            "timestamp": "2026-08-09T13:13:29.785182",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.anaconda.com"
+        },
+        {
+            "topic": "Physical AI | Center for Security and Emerging Technology",
+            "timestamp": "2026-08-09T13:07:01.346723",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "cset.georgetown.edu"
+        },
+        {
+            "topic": "6 AI Robot Breakthroughs You Missed This Week (AI NEWS)",
+            "timestamp": "2026-08-09T13:06:59.906916",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.youtube.com"
+        },
+        {
+            "topic": "Physical AI is changing robotics. Here\u2019s what it means for enterprise automation \u2013 Computerworld",
+            "timestamp": "2026-08-09T12:52:39.630183",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.computerworld.com"
+        },
+        {
+            "topic": "Welcome to Physical AI & Humanoid Robotics | Physical AI & Humanoid Robotics | Aziza Siddiqui",
+            "timestamp": "2026-08-09T12:52:38.058398",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.linkedin.com"
+        },
+        {
+            "topic": "Nvidias Vision for \"Physical AI\" in Humanoid Robotics | Humanoids Daily",
+            "timestamp": "2026-08-09T12:52:36.508079",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "humanoidsdaily.com"
+        },
+        {
+            "topic": "Robotics & Physical AI: A New Era in Automation | Global X ETFs",
+            "timestamp": "2026-08-09T12:52:34.983804",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "globalxetfs.co.jp"
+        },
+        {
+            "topic": "Physical AI and humanoid robots",
+            "timestamp": "2026-08-09T12:52:33.525156",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.deloitte.com"
+        },
+        {
+            "topic": "15 Leading AI Hardware Companies Dominating the Market in 2026 - Big Data Supply, Inc.",
+            "timestamp": "2026-08-09T12:52:22.919761",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "bigdatasupply.com"
+        },
+        {
+            "topic": "Hardware Accelerators for Artificial Intelligence",
+            "timestamp": "2026-08-09T12:52:21.510144",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "arxiv.org"
+        },
+        {
+            "topic": "Top 10 AI Hardware Accelerators Revolutionizing The Market - Barrera's IT Corp.",
+            "timestamp": "2026-08-09T12:52:20.181504",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "barreras-it.com"
+        },
+        {
+            "topic": "The Rise of AI Accelerators (11 Minutes)",
+            "timestamp": "2026-08-09T12:52:18.707316",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.youtube.com"
+        },
+        {
+            "topic": "AI's top research conference morphed into a recruiting extravaganza, summing up a wild 2023 | Fortune",
+            "timestamp": "2026-08-09T12:44:11.782084",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "fortune.com"
+        },
+        {
+            "topic": "AI News Today 2026 | Latest AI Model Releases, Trends & Analysis",
+            "timestamp": "2026-08-09T12:44:10.250577",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.buildfastwithai.com"
+        },
+        {
+            "topic": "Recent Breakthroughs in AI Technology",
+            "timestamp": "2026-08-09T12:44:08.648837",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.linkedin.com"
+        },
+        {
+            "topic": "AI Innovations: Unveiling the Latest Breakthroughs",
+            "timestamp": "2026-08-09T12:44:07.262509",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.linkedin.com"
+        },
+        {
+            "topic": "AI News & Breakthroughs: Latest AI Developments (March 13, 2026) | devFlokers",
+            "timestamp": "2026-08-09T12:44:05.790883",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.devflokers.com"
+        },
+        {
+            "topic": "AI Agent Development in 2026: What It Is and How to Build One",
+            "timestamp": "2026-08-09T12:40:31.375526",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.dreamztech.com"
+        },
+        {
+            "topic": "Top AI Agent Frameworks in 2026: AutoGen, LangChain & More",
+            "timestamp": "2026-08-09T12:40:29.843480",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.ideas2it.com"
+        },
+        {
+            "topic": "Why autonomous AI agents are dominating 2026 \u2014 and what it actually means | Yaitec Solutions",
+            "timestamp": "2026-08-09T12:40:28.424406",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.yaitec.com"
+        },
+        {
+            "topic": "AI Agents in 2026: The Future of Autonomous Software",
+            "timestamp": "2026-08-09T12:40:26.910008",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "symphony-solutions.com"
+        },
+        {
+            "topic": "Agentic AI Multi-Agent Systems: Autonomous Workflows in 2026",
+            "timestamp": "2026-08-09T12:40:25.402822",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.dima-ai.com"
+        },
+        {
+            "topic": "Top 10 Open Source AI Libraries in 2025 - GeeksforGeeks",
+            "timestamp": "2026-08-09T12:39:23.381186",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.geeksforgeeks.org"
+        },
+        {
+            "topic": "Medium",
+            "timestamp": "2026-08-09T12:39:21.790271",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "medium.com"
+        },
+        {
+            "topic": "Latest AI Developments in June 2025: Job Impacts, Open-Source Models, and Ethical Challenges - Neuro Corp Tech (AI-Based News Site)",
+            "timestamp": "2026-08-09T12:39:20.289596",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "neurocorp.tech"
+        },
+        {
+            "topic": "Developments in Open-Source AI Models 2024",
+            "timestamp": "2026-08-09T12:39:18.838814",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.linkedin.com"
+        },
+        {
+            "topic": "Large Language Models (LLMs) in 2026: Trends, Use Cases & Business Impact | Richard Bownes",
+            "timestamp": "2026-08-09T12:38:37.154850",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.youtube.com"
+        },
+        {
+            "topic": "Physical AI is changing robotics. Here\u2019s what it means for enterprise automation \u2013 Computerworld",
+            "timestamp": "2026-08-09T12:35:19.711163",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.computerworld.com"
+        },
+        {
+            "topic": "Welcome to Physical AI & Humanoid Robotics | Physical AI & Humanoid Robotics | Aziza Siddiqui",
+            "timestamp": "2026-08-09T12:35:18.113647",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.linkedin.com"
+        },
+        {
+            "topic": "Nvidias Vision for \"Physical AI\" in Humanoid Robotics | Humanoids Daily",
+            "timestamp": "2026-08-09T12:35:16.721552",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "humanoidsdaily.com"
+        },
+        {
+            "topic": "Robotics & Physical AI: A New Era in Automation | Global X ETFs",
+            "timestamp": "2026-08-09T12:35:15.381590",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "globalxetfs.co.jp"
+        },
+        {
+            "topic": "Physical AI and humanoid robots",
+            "timestamp": "2026-08-09T12:35:14.039610",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.deloitte.com"
+        },
+        {
+            "topic": "15 Leading AI Hardware Companies Dominating the Market in 2026 - Big Data Supply, Inc.",
+            "timestamp": "2026-08-09T12:34:49.036908",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "bigdatasupply.com"
+        },
+        {
+            "topic": "Trends in Artificial Intelligence | Epoch AI",
+            "timestamp": "2026-08-09T12:32:24.736725",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "epoch.ai"
+        },
+        {
+            "topic": "AI infrastructure compute strategy | Deloitte Insights",
+            "timestamp": "2026-08-09T12:32:23.220157",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.deloitte.com"
+        },
+        {
+            "topic": "What's next in AI infrastructure: Scaling for the agentic and physical AI era",
+            "timestamp": "2026-08-09T12:32:21.706562",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.youtube.com"
+        },
+        {
+            "topic": "The best large language models (LLMs) in 2026",
+            "timestamp": "2026-08-09T12:26:50.402573",
+            "score": 35,
+            "rejection_reason": "The article presents a speculative 2026 LLM landscape with fictional model versions (Claude Opus 4.8, GPT-5.5, Gemini 3.1 Pro) that do not exist as of the current date. While the topic of LLM benchmarking is highly relevant to the AI ecosystem, the content is forward-looking fiction rather than technical reporting. The source (yourgpt.ai) is a secondary blog with no primary research authority. Timeliness is poor for editorial planning since the described state is hypothetical. Redundancy risk is high given the saturation of 'best LLM' listicles. Technical significance is low because the specs, pricing, and benchmark claims are invented. Overall, this is low-value filler content unsuitable for a technical editorial pipeline.",
+            "source": "yourgpt.ai"
+        },
+        {
+            "topic": "Autonomous Agent Frameworks - SmythOS",
+            "timestamp": "2026-08-09T12:14:00.167591",
+            "score": 40,
+            "rejection_reason": "The topic of autonomous agent frameworks is highly relevant to the current AI ecosystem, but this specific content is vendor marketing material from smythos.com promoting SmythOS alongside established frameworks like LangChain and Auto-GPT. It lacks technical depth, benchmarks, or independent analysis, resulting in low novelty and technical significance. The source is a first-party promotional site, severely limiting credibility. The agent framework landscape is already well-covered, creating high redundancy risk. While the general theme is timely, the content itself offers little new actionable insight for a technical audience.",
+            "source": "smythos.com"
+        },
+        {
+            "topic": "Best Open-Source AI Platforms for 2026: The Frameworks Powering Next-Gen ML and LLMs",
+            "timestamp": "2026-08-09T12:09:16.706337",
+            "score": 54,
+            "rejection_reason": "The topic addresses a highly relevant area (open-source AI infrastructure) but offers low novelty \u2014 PyTorch, TensorFlow, Hugging Face, and models like LLaMA/Mistral are extensively covered elsewhere. Technical depth is superficial; the piece reads as a high-level landscape survey with promotional undertones (GreenMind/NVIDIA NIM callout). Source is a vendor blog (greennode.ai), reducing authority. The '2026' framing is not substantiated with forward-looking analysis. High redundancy risk given saturation of 'best open-source AI platforms' content. Overall, a competent but undifferentiated overview.",
+            "source": "greennode.ai"
+        },
+        {
+            "topic": "Best Open Source AI Models",
+            "timestamp": "2026-08-09T12:07:47.188446",
+            "score": 65,
+            "rejection_reason": "High relevance to AI ecosystem and authoritative IBM source, but content covers well-established frameworks (PyTorch, Scikit-learn, OpenCV) with minimal novel insights. Significant redundancy risk given ubiquitous coverage of 'best open source AI models' across technical media. Technical depth is surface-level, suitable for orientation but not practitioner implementation.",
+            "source": "www.ibm.com"
+        },
+        {
+            "topic": "[PDF] Hardware Accelerators for Artificial Intelligence - arXiv",
+            "timestamp": "2026-08-09T11:53:25.368438",
+            "score": 68,
+            "rejection_reason": "This arXiv survey chapter provides a comprehensive overview of AI hardware accelerators (TPUs, neuromorphic chips, GPUs, FPGAs, NVM) with strong relevance to the AI ecosystem's computational backbone. However, it covers well-established architectures (TPUv2 2017, Loihi, AlexNet-era context) with limited discussion of cutting-edge developments (H100, TPUv4/v5, latest neuromorphic advances), resulting in modest novelty and timeliness. The source is credible but pre-print. High redundancy risk exists given the abundance of similar hardware surveys. Overall, a solid reference piece but not a primary source for breaking insights.",
+            "source": "arxiv.org"
+        },
+        {
+            "topic": "Top 10 AI Hardware Accelerators Revolutionizing The Market - Barrera's IT Corp.",
+            "timestamp": "2026-08-09T11:53:02.928201",
+            "score": 48,
+            "rejection_reason": "The topic addresses a highly relevant area (AI hardware acceleration) but the content is a generic overview of well-established trends (heterogeneous computing, 3D stacking, neuromorphic) without novel research, benchmarks, or recent announcements. The source appears to be a corporate IT services blog likely producing SEO-driven aggregate content. Technical depth is superficial \u2014 mentioning concepts like sparse tensor optimization and ferroelectric memory but providing no specifications, performance data, or architectural innovation. 'Top 10' list formats on this subject are extensively covered by primary sources (vendor blogs, IEEE, Ars Technica, AnandTech), creating very high redundancy risk. Suitable only for beginner-level awareness, not technical decision-making.",
+            "source": "barreras-it.com"
+        },
+        {
+            "topic": "AI Hardware Trends: Everything You Need to Know - Big Data Supply, Inc.",
+            "timestamp": "2026-08-09T11:52:25.253860",
+            "score": 58,
+            "rejection_reason": "The article provides a broad overview of current AI accelerator hardware (H100, MI300, TPU v5e, Cerebras WSE-3, Graphcore IPU) and mentions emerging trends like AI PCs and edge inference. While highly relevant to the AI infrastructure layer, the content is largely a summary of publicly known specifications and positioning rather than novel analysis or breaking developments. Technical significance is moderate \u2014 it cites key specs (memory, bandwidth, pricing) but lacks deep architectural insight or benchmark methodology. Timeliness is decent, referencing shipping products and near-term forecasts. Source quality is limited: Big Data Supply is a secondary-market IT hardware reseller, not a primary research or engineering authority, raising concerns about commercial bias and depth. Redundancy risk is very high, as comparisons between Nvidia, AMD, Google, and startup accelerators are extensively covered by vendor blogs, analyst firms (e.g., SemiAnalysis, Dylan Patel), and technical press. Overall, useful as a curated snapshot for non-specialists but low marginal value for a technical audience already tracking hardware roadmaps.",
+            "source": "bigdatasupply.com"
+        },
+        {
+            "topic": "The Rise of AI Accelerators (11 Minutes)",
+            "timestamp": "2026-08-09T11:51:47.390975",
+            "score": 52,
+            "rejection_reason": "The topic of AI accelerators is critically relevant to the AI ecosystem (95) as hardware underpins all model training and inference. However, the content appears to be a high-level survey of well-established players (NVIDIA, Google, Apple) and architectures (GPU, TPU, ASIC) without novel technical insights, specific benchmarks, or emerging startup analysis, resulting in low novelty (25) and very high redundancy risk (85). Technical significance is moderate (60) as it correctly identifies architectural distinctions but lacks depth on interconnects, memory hierarchies, or compiler stacks. Timeliness is low-moderate (45) as the landscape described has been stable for 2+ years. Source quality is uncertain (50) given only a generic YouTube title is provided without channel authority or publication date. Overall, this is a competent introductory overview but offers low marginal value for a technical audience already familiar with the hardware landscape.",
+            "source": "www.youtube.com"
+        },
+        {
+            "topic": "A list of large language models (LLMs)",
+            "timestamp": "2026-08-09T11:50:45.926736",
+            "score": 65,
+            "rejection_reason": "The article offers a structured overview of notable LLM families (GLM, Olmo, Phi) with specific architectural details, which is highly relevant to the AI ecosystem. However, novelty is limited by the ubiquity of such lists and the presence of apparently hallucinated future release dates (e.g., models released in 2025-2026). Technical significance is moderate due to the inclusion of hybrid architectures and training transparency details, but coverage is incomplete (Phi section truncated). Timeliness is ambiguous; the future-dated content suggests either a planning document or hallucination. Source quality is undermined by mismatched references (citations about Grok controversies, GPT-5.4, etc., unrelated to the described models). Redundancy risk is high given the abundance of maintained LLM leaderboards and directories (Hugging Face, Papers With Code). Overall, the piece has informational value but suffers from credibility and completeness issues.",
+            "source": "www.ibm.com"
+        },
+        {
+            "topic": "AI Updates Today (August 2026) \u2013 Latest AI Model Releases",
+            "timestamp": "2026-08-09T11:49:58.810725",
+            "score": 68,
+            "rejection_reason": "The page is a timely aggregator of recent LLM releases (DeepSeek-V4-Flash, Claude Opus 5, Gemini 3.5 variants) with practical FAQs on versioning and API tracking, making it highly relevant and current for AI practitioners. However, the concept of a model-release tracker is not novel; many similar resources exist (e.g., Hugging Face, Papers With Code, provider changelogs), resulting in high redundancy risk. Technical significance is moderate as it curates but does not generate technical insights. Source quality is decent for a niche aggregator but not a primary authority. Overall, a useful reference tool with limited unique value.",
+            "source": "llm-stats.com"
+        },
+        {
+            "topic": "Managing Complex AI Model Deployment Infrastructures | Dice.com Career Advice",
+            "timestamp": "2026-08-09T11:30:18.869921",
+            "score": 62,
+            "rejection_reason": "Solid practical overview of AI deployment infrastructure trends from a career-focused source. Covers relevant technologies (serverless, containers, model optimization, edge AI, federated learning) but at survey level without deep technical novelty. High redundancy risk as these topics are extensively covered across cloud provider blogs, MLOps platforms, and technical conferences. Good reference for engineers entering MLOps/DevOps for AI, but not a primary source for cutting-edge developments.",
+            "source": "www.dice.com"
+        },
+        {
+            "topic": "Mistral AI's Major Funding and Infrastructure Expansion in 2025-2026: Latest Developments",
+            "timestamp": "2026-08-09T11:28:22.130659",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "8news.ai"
+        },
+        {
+            "topic": "Latest Developments in AI, Data, and Business in 2026",
+            "timestamp": "2026-08-09T11:28:21.771592",
+            "score": 50,
+            "rejection_reason": "High relevance as infrastructure investment is central to AI ecosystem dynamics, but low novelty \u2014 the compute arms race and mega-cap capex narratives have dominated 2024-2025 coverage. Technical significance is minimal; this is financial/strategic reporting, not algorithmic or architectural advancement. Source quality is weak (LinkedIn aggregates secondary content). Redundancy risk is extreme given saturation of 'big tech spends billions on data centers' stories. Timeliness is ambiguous \u2014 February/March 2026 dates suggest either speculative forward-looking content or misdated material.",
+            "source": "www.linkedin.com"
+        },
+        {
+            "topic": "Inside the AI Boom: The Infrastructure Powering Intelligence",
+            "timestamp": "2026-08-09T10:55:04.786347",
+            "score": 55,
+            "rejection_reason": "The article provides a market-intelligence overview of AI infrastructure trends (GPU shortages, custom silicon, hyperscaler dynamics, sustainability) from a commercial vendor blog. It is highly relevant and timely but offers little novel technical depth, relying on well-established narratives. Source quality is moderate (commercial analyst content), and redundancy risk is high given saturated coverage of these topics across the AI ecosystem.",
+            "source": "blog.sp-edge.com"
+        },
+        {
+            "topic": "AI Infrastructure, Compute & Enterprise AI Trends: August",
+            "timestamp": "2026-08-09T10:52:47.967301",
+            "score": 50,
+            "rejection_reason": "Failed to evaluate.",
+            "source": "www.linkedin.com"
+        },
+        {
+            "topic": "Recent developments in agentic AI this week",
+            "timestamp": "2026-08-09T10:24:29.854783",
+            "score": 68,
+            "rejection_reason": "This Reddit-curated weekly roundup of 12 agentic AI developments covers a highly relevant and fast-moving area of the AI ecosystem. The content aggregates timely updates on agent frameworks, commerce infrastructure, and execution environments (e.g., OpenFang's WASM sandboxing). However, as a community summary rather than primary technical publication, novelty is limited to curation value, source quality is moderate, and redundancy risk is significant given overlapping coverage across AI newsletters and blogs. Technical significance is notable but varies across the 12 items. Best suited as a discovery signal for deeper investigation rather than authoritative technical reference.",
+            "source": "www.reddit.com"
+        },
+        {
+            "topic": "Best AI Agent Platforms For Automation And Workflow | AI Evolution posted on the topic | LinkedIn",
+            "timestamp": "2026-08-09T10:23:33.648983",
+            "score": 32,
+            "rejection_reason": "The topic (AI agent frameworks) is highly relevant to the current AI ecosystem, but this specific content piece is a low-value LinkedIn repost of a Twitter/X listicle that merely enumerates seven well-known frameworks with one-line marketing descriptions. The content is triplicated in the raw text, signals zero original analysis, benchmarks, or architectural comparison. Source quality is poor (secondary social aggregation), novelty is near-zero as these frameworks have been extensively covered for months, and redundancy risk is extreme \u2014 virtually every AI newsletter has published an equivalent list. Technical significance is minimal because no code, performance data, or integration patterns are provided. Overall, this is curation noise rather than signal.",
+            "source": "www.linkedin.com"
+        },
+        {
+            "topic": "Top AI Agent Frameworks in 2026: AutoGen, LangChain & More",
+            "timestamp": "2026-08-09T10:23:12.233420",
+            "score": 55,
+            "rejection_reason": "The topic addresses a highly relevant area (AI agent frameworks) but offers low novelty as AutoGen, LangChain, and CrewAI have been extensively covered since 2023-2024. Technical significance is moderate \u2014 the piece provides a practical overview but lacks deep architectural analysis or benchmarking. Timeliness is questionable; the '2026' framing appears speculative for currently established frameworks. Source quality is limited: Ideas2IT is a consultancy blog with commercial intent, not a primary research or authoritative technical outlet. Redundancy risk is very high given the saturation of similar 'top frameworks' listicles. Overall, a serviceable but undifferentiated survey article.",
+            "source": "www.ideas2it.com"
+        },
+        {
+            "topic": "How Do Autonomous AI Agents Transform Development Workflows | Augment Code",
+            "timestamp": "2026-08-09T10:22:33.326683",
+            "score": 55,
+            "rejection_reason": "The topic of autonomous AI agents transforming development workflows is highly relevant and timely, reflecting a major industry trend. However, this specific piece is vendor marketing content from Augment Code making extraordinary claims (252x speedup, $4.5M savings) based solely on unverified internal benchmarks. The technical approach described (codebase-aware analysis, multi-service planning) is significant but not uniquely novel in a crowded field including Devin, Cursor, GitHub Copilot Workspace, and others. Source quality is low due to clear commercial bias and lack of independent validation. Redundancy risk is high as this topic is extensively covered across multiple vendors and technical publications.",
+            "source": "www.augmentcode.com"
+        }
+    ],
+    "recent_topics": [
+        {
+            "title": "How AI is transforming research: More papers, less quality, and a strained review system - Haas News | UC Berkeley Haas",
+            "timestamp": "2026-08-09T13:30:57.212585"
+        },
+        {
+            "title": "A data-driven look at AI's transformative impact on the future ...",
+            "timestamp": "2026-08-09T13:29:58.159283"
+        },
+        {
+            "title": "The Latest Stunning Breakthroughs in AI - ACS",
+            "timestamp": "2026-08-09T13:29:35.775569"
+        },
+        {
+            "title": "Breakthrough AI research - Google AI",
+            "timestamp": "2026-08-09T13:29:14.468598"
+        },
+        {
+            "title": "10 Key AI Research Breakthroughs from 2026 So Far - Fueler",
+            "timestamp": "2026-08-09T13:28:15.510732"
+        },
+        {
+            "title": "Autonomous generative AI agents | Deloitte Insights",
+            "timestamp": "2026-08-09T13:28:06.393554"
+        },
+        {
+            "title": "Autonomous AI Agents,  Large Action Model and Microsoft Copilot",
+            "timestamp": "2026-08-09T13:28:06.392803"
+        },
+        {
+            "title": "Top AI Agent Frameworks in 2026: AutoGen, LangChain & More",
+            "timestamp": "2026-08-09T13:28:06.392048"
+        },
+        {
+            "title": "How Do Autonomous AI Agents Transform Development Workflows | Augment Code",
+            "timestamp": "2026-08-09T13:28:06.391259"
+        },
+        {
+            "title": "Latest Trends in Autonomous AI Web Agents",
+            "timestamp": "2026-08-09T13:28:06.390157"
+        },
+        {
+            "title": "Autonomous generative AI agents | Deloitte Insights",
+            "timestamp": "2026-08-09T13:26:39.634692"
+        },
+        {
+            "title": "Autonomous AI Agents,  Large Action Model and Microsoft Copilot",
+            "timestamp": "2026-08-09T13:26:00.830299"
+        },
+        {
+            "title": "Top AI Agent Frameworks in 2026: AutoGen, LangChain & More",
+            "timestamp": "2026-08-09T13:25:42.298391"
+        },
+        {
+            "title": "How Do Autonomous AI Agents Transform Development Workflows | Augment Code",
+            "timestamp": "2026-08-09T13:24:10.670287"
+        },
+        {
+            "title": "Latest Trends in Autonomous AI Web Agents",
+            "timestamp": "2026-08-09T13:24:10.669246"
+        },
+        {
+            "title": "Physical AI | Center for Security and Emerging Technology",
+            "timestamp": "2026-08-09T13:23:42.131449"
+        },
+        {
+            "title": "AI for Robotics",
+            "timestamp": "2026-08-09T13:23:42.130605"
+        },
+        {
+            "title": "6 AI Robot Breakthroughs You Missed This Week (AI NEWS)",
+            "timestamp": "2026-08-09T13:23:42.129755"
+        },
+        {
+            "title": "Robotics & Physical AI: A New Era in Automation | Global X ETFs",
+            "timestamp": "2026-08-09T13:23:42.128732"
+        },
+        {
+            "title": "Physical AI and humanoid robots",
+            "timestamp": "2026-08-09T13:23:42.127098"
+        },
+        {
+            "title": "All AI Coding Assistants & Code Review Tools (2026)",
+            "timestamp": "2026-08-09T13:23:27.377046"
+        },
+        {
+            "title": "All AI Coding Assistants & Code Review Tools (2026)",
+            "timestamp": "2026-08-09T13:23:27.376035"
+        },
+        {
+            "title": "AI Coding Assistant Statistics 2026: Adoption & Trust",
+            "timestamp": "2026-08-09T13:23:27.374757"
+        },
+        {
+            "title": "Top AI Coding Assistants & Developer Tools of 2025 | AICosts.ai Blog",
+            "timestamp": "2026-08-09T13:23:27.373878"
+        },
+        {
+            "title": "AI Coding Tools & Developer Assistants (Best AI for Developers)",
+            "timestamp": "2026-08-09T13:23:27.372220"
+        },
+        {
+            "title": "All AI Coding Assistants & Code Review Tools (2026)",
+            "timestamp": "2026-08-09T13:14:22.379769"
+        },
+        {
+            "title": "All AI Coding Assistants & Code Review Tools (2026)",
+            "timestamp": "2026-08-09T13:14:20.929533"
+        },
+        {
+            "title": "AI Coding Assistant Statistics 2026: Adoption & Trust",
+            "timestamp": "2026-08-09T13:14:19.559582"
+        },
+        {
+            "title": "Top AI Coding Assistants & Developer Tools of 2025 | AICosts.ai Blog",
+            "timestamp": "2026-08-09T13:14:18.120868"
+        },
+        {
+            "title": "AI Coding Tools & Developer Assistants (Best AI for Developers)",
+            "timestamp": "2026-08-09T13:14:16.085602"
+        },
+        {
+            "title": "Best Open-Source AI Platforms for 2026: The Frameworks ...",
+            "timestamp": "2026-08-09T13:13:34.401878"
+        },
+        {
+            "title": "Top 10 Open Source AI Libraries in 2025 - GeeksforGeeks",
+            "timestamp": "2026-08-09T13:13:32.764330"
+        },
+        {
+            "title": "AI Updates Today (August 2026) \u2013 Latest AI Model Releases",
+            "timestamp": "2026-08-09T13:13:31.333697"
+        },
+        {
+            "title": "Best Open Source AI Models - IBM",
+            "timestamp": "2026-08-09T13:13:29.786684"
+        },
+        {
+            "title": "Best AI Development Tools for 2026 | Anaconda",
+            "timestamp": "2026-08-09T13:13:27.772530"
+        },
+        {
+            "title": "15 Leading AI Hardware Companies Dominating the Market in 2026",
+            "timestamp": "2026-08-09T13:08:25.508148"
+        },
+        {
+            "title": "Hardware Accelerators for Artificial Intelligence",
+            "timestamp": "2026-08-09T13:08:25.506097"
+        },
+        {
+            "title": "Top 30+ AI Chip Makers: NVIDIA & Its Competitors",
+            "timestamp": "2026-08-09T13:08:25.504712"
+        },
+        {
+            "title": "The Rise of AI Accelerators (11 Minutes) - YouTube",
+            "timestamp": "2026-08-09T13:08:25.503000"
+        },
+        {
+            "title": "Top 10 AI Hardware Accelerators Revolutionizing The Market",
+            "timestamp": "2026-08-09T13:08:25.500547"
+        },
+        {
+            "title": "Physical AI | Center for Security and Emerging Technology",
+            "timestamp": "2026-08-09T13:06:59.908421"
+        },
+        {
+            "title": "AI for Robotics",
+            "timestamp": "2026-08-09T13:06:59.907603"
+        },
+        {
+            "title": "6 AI Robot Breakthroughs You Missed This Week (AI NEWS)",
+            "timestamp": "2026-08-09T13:06:57.931577"
+        },
+        {
+            "title": "Robotics & Physical AI: A New Era in Automation | Global X ETFs",
+            "timestamp": "2026-08-09T13:06:57.930814"
+        },
+        {
+            "title": "Physical AI and humanoid robots",
+            "timestamp": "2026-08-09T13:06:57.929689"
+        },
+        {
+            "title": "Physical AI is changing robotics. Here\u2019s what it means for enterprise automation \u2013 Computerworld",
+            "timestamp": "2026-08-09T12:52:38.059042"
+        },
+        {
+            "title": "Welcome to Physical AI & Humanoid Robotics | Physical AI & Humanoid Robotics | Aziza Siddiqui",
+            "timestamp": "2026-08-09T12:52:36.510256"
+        },
+        {
+            "title": "Nvidias Vision for \"Physical AI\" in Humanoid Robotics | Humanoids Daily",
+            "timestamp": "2026-08-09T12:52:34.984424"
+        },
+        {
+            "title": "Robotics & Physical AI: A New Era in Automation | Global X ETFs",
+            "timestamp": "2026-08-09T12:52:33.525837"
+        },
+        {
+            "title": "Physical AI and humanoid robots",
+            "timestamp": "2026-08-09T12:52:31.891969"
+        }
+    ],
+    "agent_state": {}
+}

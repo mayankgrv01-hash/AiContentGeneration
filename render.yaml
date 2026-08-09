@@ -1,7 +1,7 @@
 services:
   # Web API server
   - type: web
-    name: nexus-api
+    name: codeblooded-api
     env: python
     region: oregon
     plan: free
@@ -27,7 +27,7 @@ services:
 
   # Autonomous scheduler — runs one cycle every 15 minutes via Render Cron Job
   - type: cron
-    name: nexus-scheduler
+    name: codeblooded-scheduler
     env: python
     region: oregon
     plan: free

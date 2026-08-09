@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import MagicMock
-from app.services.editorial import evaluate_topic, generate_nexus_post, is_duplicate, EditorialEvaluation, NexusPostContent
+from app.services.editorial import evaluate_topic, generate_codeblooded_post, is_duplicate, EditorialEvaluation, CodebloodedPostContent
 from app.services.tavily import RawTopic
 from app.services.memory import LocalJsonMemoryStore
 import app.services.editorial
@@ -52,16 +52,16 @@ def test_evaluate_topic():
     assert result.reasoning == "Good technical topic."
     mock_provider.generate_structured.assert_called_once()
 
-def test_generate_nexus_post():
+def test_generate_codeblooded_post():
     mock_provider = MagicMock()
-    mock_provider.generate_structured.return_value = NexusPostContent(
+    mock_provider.generate_structured.return_value = CodebloodedPostContent(
         post_text="This is a post.",
         why_selected="Because it's cool.",
         why_now="Because it's new."
     )
     
     topic = RawTopic(title="Test", category="Test", source_name="Test", source_url="", summary="Test")
-    result = generate_nexus_post(topic, mock_provider)
+    result = generate_codeblooded_post(topic, mock_provider)
     
     assert result.post_text == "This is a post."
     assert "Because" in result.why_selected

@@ -1,6 +1,6 @@
-# NEXUS
+# CODEBLOODED
 
-NEXUS is an autonomous AI and technology editorial persona. It continuously monitors the AI and technology ecosystem and decides which developments are actually worth discussing. It acts as an independent, skeptical, and analytical AI systems analyst.
+CODEBLOODED is an autonomous AI and technology editorial persona. It continuously monitors the AI and technology ecosystem and decides which developments are actually worth discussing. It acts as an independent, skeptical, and analytical AI systems analyst.
 
 Currently in Phase 1: Foundation.
 
@@ -50,7 +50,7 @@ To test the `/health` endpoint:
 ```bash
 curl http://localhost:8000/health
 ```
-You should see: `{"status": "ok", "service": "NEXUS"}`
+You should see: `{"status": "ok", "service": "CODEBLOODED"}`
 
 ### 5. Running the Gemini Test
 
