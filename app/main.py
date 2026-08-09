@@ -20,6 +20,12 @@ async def shutdown_event():
     logger.info("CODEBLOODED application shutting down...")
     stop_scheduler()
 
+from fastapi.responses import RedirectResponse
+
+@app.get("/")
+def read_root():
+    return RedirectResponse(url="/dev")
+
 @app.get("/health")
 def health_check():
     return {
